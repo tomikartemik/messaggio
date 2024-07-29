@@ -30,7 +30,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 	{
 		message.POST("/new", h.SaveNewMessage)
 		message.GET("/stats", h.ProcessedMessagesStats)
-		message.GET("/ping", h.Ping)
 	}
+	router.GET("/ping", h.Ping)
 	return router
 }
